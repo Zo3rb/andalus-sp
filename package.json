@@ -1,0 +1,32 @@
+{
+  "name": "andalus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js NODE_ENV=production",
+    "dev:backend": "nodemon app.js -e *",
+    "dev:frontend": "npm run start -prefix client",
+    "dev": "concurrently npm dev:*",
+    "install": "npm run install && cd ./client && npm install",
+    "pre:deploy": "cd client && npm run build",
+    "seed": "node seeder.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.14",
+    "morgan": "^1.10.0",
+    "react-hot-toast": "^2.0.0",
+    "validator": "^13.6.0"
+  }
+}
