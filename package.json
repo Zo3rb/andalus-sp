@@ -7,8 +7,7 @@
     "start": "node app.js NODE_ENV=production",
     "dev:backend": "nodemon app.js -e *",
     "dev:frontend": "npm run start -prefix client",
-    "dev": "concurrently npm dev:*",
-    "install": "npm run install && cd ./client && npm install",
+    "dev": "concurrently npm:dev:*",
     "pre:deploy": "cd client && npm run build",
     "seed": "node seeder.js"
   },
